@@ -1,3 +1,10 @@
+document.addEventListener('click', () => {
+    const audio = document.getElementById('background-audio');
+    if (audio.paused) {
+        audio.play();
+    }
+});
+
 const guessedNumber = document.querySelector(".guessedNumber");
 const buttonGuess = document.querySelector(".play");
 
