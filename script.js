@@ -6,7 +6,7 @@ function playAudio() {
     let playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise.catch((error) => {
-        console.log("Playback prevented:", error);
+        
       });
     }
     hasInteracted = true;
@@ -57,9 +57,6 @@ function initializeGame() {
   hint.textContent = "READY TO PLAY";
   guessedNumber.value = ""; // Clear the input field
   buttonGuess.textContent = "GuessNumber"; // Reset the button text
-  console.log(
-    `Game started with difficulty: ${difficultyLevel}, Number: ${currentGuessNumber}`
-  );
 
   // Ensure the button does not have multiple event listeners
   buttonGuess.removeEventListener("click", initializeGame); // Remove the "Play Again" listener if it exists
@@ -95,7 +92,7 @@ buttonGuess.addEventListener("click", function () {
         winSplash.classList.add("bg-[#393939]");
       }, 1000);
 
-      console.log("Yay, you guessed it!");
+     
       totalScore += guessesleft; // Add remaining guesses to score
       score.textContent = totalScore;
       games++;
@@ -110,7 +107,7 @@ buttonGuess.addEventListener("click", function () {
     guesses.textContent = guessesleft;
 
     if (guessesleft <= 0) {
-      console.log("No guesses left. Game over.");
+     
       hint.textContent = "You Lose, Try Again!";
       buttonGuess.textContent = "Play Again";
 
