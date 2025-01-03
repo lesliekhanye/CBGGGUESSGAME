@@ -1,9 +1,19 @@
-document.addEventListener('click', () => {
-    const audio = document.getElementById('background-audio');
-    if (audio.paused) {
-        audio.play();
+const audio = document.getElementById("backgroundAudio");
+let hasInteracted = false;
+
+function playAudio() {
+  if (!hasInteracted) {
+    let playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((error) => {
+        console.log("Playback prevented:", error);
+      });
     }
-});
+    hasInteracted = true;
+  }
+}
+
+document.addEventListener("click", playAudio);
 
 const guessedNumber = document.querySelector(".guessedNumber");
 const buttonGuess = document.querySelector(".play");
