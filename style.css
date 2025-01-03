@@ -1,0 +1,77 @@
+/* Base styles for mobile */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", serif;
+  color: white;
+}
+
+.guessBox {
+  /* From https://css.glass */
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.668);
+  border-radius: 3px;
+  box-shadow: 0 4px 30px rgba(179, 179, 179, 0.584);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+/* Mobile-specific adjustments (500px and below) */
+@media only screen and (max-width: 500px) {
+  body {
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0%;
+  }
+  h1 {
+    font-size: xx-large;
+  }
+  .gamesPlay {
+    font-size: xx-small;
+  }
+  #guesses {
+    font-size: small;
+  }
+  .guesses {
+    font-size: x-small;
+  }
+
+  #score {
+    font-size: small;
+  }
+  .score {
+    font-size: x-small;
+  }
+  .mainCont {
+    width: 100%;
+  }
+  #play {
+    font-size: xx-small;
+  }
+}
+
+/* Adjustments for screens between 580px and 800px */
+@media only screen and (min-width: 501px) and (max-width: 800px) {
+  .gamesPlay {
+    font-size: xx-small;
+  }
+  #guesses {
+    font-size: small;
+  }
+  #score {
+    font-size: small;
+  }
+  .score {
+    font-size: small;
+  }
+  .mainCont {
+    width: 100%;
+  }
+}

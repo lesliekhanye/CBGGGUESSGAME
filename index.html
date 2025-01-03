@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>CBGG</title>
+  </head>
+
+  <body class="splashWin bg-[#393939] pt-2">
+    <audio autoplay loop>
+      <source src="mingle.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <h1 class="text-center text-xl">CBGG GUESS GAME</h1>
+    <div class="relative mt-5 w-36 h-36 mr-auto ml-auto">
+      <div class="guessBox"></div>
+      <p
+        class="guessNumber absolute inset-0 flex justify-center items-center text-6xl"
+      >
+        ?
+      </p>
+    </div>
+    <div class="flex justify-center mt-8">
+      <p class="font-sans text-xs text-center text-[#FFFF00]">
+        <a href="https://lesliekhanye.tech/"> Click HERE To Get A Free Gift</a>
+      </p>
+    </div>
+
+    <div class="difficulty flex justify-center mt-6">
+      <div>
+        <p class="text-center">Select Difficulty</p>
+        <select
+          name="difficultyLevel"
+          id=""
+          class="difficultyLevel h-10 bg-black text-sm"
+        >
+          <option value="Easy" selected class="text-xs">
+            Easy Whistling Dixie
+          </option>
+          <option value="Medium" class="text-xs">
+            Medium Whistling Helium
+          </option>
+          <option value="Hard" class="text-xs">Hard Whistling Mud</option>
+          <option value="Impossible" class="text-xs">Impossible To Win</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="gameRules mt-3">
+      <p class="rule text-sm text-center font-serif">
+        You 20 chances to guess a number between 0 and 21
+      </p>
+    </div>
+    <div class="mainCont ml-auto mr-auto w-11/12 flex justify-center mt-2 p-3">
+      <div
+        class="flex justify-center grid-rows-4 grid grid-cols-3 gap-x-10 gap-y-3.5"
+      >
+        <div>
+          <div id="guesses"><p class="text-center">GUESSES</p></div>
+          <br />
+          <div><p class="guesses text-center text-5xl">8</p></div>
+        </div>
+
+        <div class="flex justify-center items-center">
+          <div class="p-3 bg-[#352C2C]">
+            <div><p class="gamesPlay text-xs text-center">GAMES PLAYED</p></div>
+            <div><p class="gamesPlayed text-sm text-center">0</p></div>
+          </div>
+        </div>
+        <div>
+          <div><p id="score" class="text-center">SCORE</p></div>
+          <br />
+          <div><p class="score text-center text-5xl mt-0 pt-0">0</p></div>
+        </div>
+
+        <div
+          class="col-span-3 ml-auto mr-auto flex justify-center items-center"
+        >
+          <div>
+            <span class="block text-center">Enter Your Guess</span>
+            <input
+              type="number"
+              class="guessedNumber block h-12 text-black w-20 text-2xl text-center ml-auto mr-auto"
+            />
+          </div>
+        </div>
+        <div class="col-span-3 border-t-4 pt-2">
+          <p class="hint text-center">READY TO PLAY</p>
+          <!-- Adjusted position -->
+        </div>
+        <div
+          class="col-span-3 flex justify-center items-center"
+          style="position: relative; top: -70px"
+        >
+          <button class="play p-3 text-3xl text-gray-950 bg-[#D9D9D9]">
+            Guess Number
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
